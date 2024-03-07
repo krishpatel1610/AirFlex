@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+    
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Increased padding for better spacing */
+            width: 900px;
+            height: 500px;
+            box-sizing: border-box;
+        }
+    
+        .form-group {
+            margin-bottom: 20px; /* Increased margin for better spacing */
+        }
+    
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    
+        .radio-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+    
+        .radio-group label {
+            margin-right: 20px;
+        }
+    
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+    
+        .input-group input,
+        .input-group select {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        .search-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>    
+</head>
+<body>
+    <div class="card">
+        <form>
+            <div class="form-group">
+                <label for="trip-type">Trip Type</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="trip-type" value="one-way"> One Way</label>
+                    <label><input type="radio" name="trip-type" value="round-trip"> Round Trip</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="from">From</label>
+                <input type="text" id="from" name="from">
+            </div>
+
+            <div class="form-group">
+                <label for="to">To</label>
+                <input type="text" id="to" name="to">
+            </div>
+
+            <div class="input-group">
+                <div class="form-group">
+                    <label for="departure-date">Departure Date</label>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="return-date">Return Date</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div> -->
+            </div>
+
+            <div class="form-group">
+                <label for="travelers">Travelers</label>
+                <select id="travelers" name="travelers">
+                    <option value="child">Child</option>
+                    <option value="adult">Adult</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="class">Class</label>
+                <select id="class" name="class">
+                    <option value="economy">Economy Class</option>
+                    <option value="business">Business Class</option>
+                </select>
+            </div>
+
+            <button type="button" class="search-button">Search Flights</button>
+        </form>
+    </div>
+</body>
+</html>
